@@ -2,11 +2,19 @@ import getopt
 import os
 import subprocess
 import sys
-from blessings import Terminal
 
 MVN_DEPENDENCY_TREE_COMMAND = ['mvn', 'dependency:tree']
 
-term = Terminal()
+
+class ConsoleColor:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 
 def parse_options(args):
@@ -60,23 +68,23 @@ if __name__ == '__main__':
 
     # Parse CLI options
     root_dir, marker_file, dependency_name = parse_options(sys.argv[1:])
-    print(term.blue('Options:'))
-    print(term.green('  Root folder: ') + root_dir)
-    print(term.green('  Marker file: ') + marker_file)
-    print(term.green('  Dependency name: ') + dependency_name)
+    print(ConsoleColor.OKBLUE + 'Options:' + ConsoleColor.ENDC)
+    print(ConsoleColor.OKGREEN + '  Root folder: ' + ConsoleColor.ENDC + root_dir)
+    print(ConsoleColor.OKGREEN + '  Marker file: ' + ConsoleColor.ENDC + marker_file)
+    print(ConsoleColor.OKGREEN + '  Dependency name: ' + ConsoleColor.ENDC + dependency_name)
     print()
 
     # Find project dirs
     projects_dirs = find_projects(root_dir, marker_file)
-    print(term.blue('Found projects:'))
+    print(ConsoleColor.OKBLUE + 'Project dirs:' + ConsoleColor.ENDC)
     for project_dir in projects_dirs:
         print('  ' + project_dir)
     print()
 
     # Check project dependencies
-    print(term.blue('Dependencies:'))
+    print(ConsoleColor.OKBLUE + 'Dependencies:' + ConsoleColor.ENDC)
     for project_dir in projects_dirs:
-        print(term.green('Project: ') + project_dir)
+        print(ConsoleColor.OKGREEN + 'Project: ' + ConsoleColor.ENDC, project_dir)
         print()
         mvn_output = launch_maven_dependency(project_dir)
         dependencies = found_dependencies(mvn_output, dependency_name)
