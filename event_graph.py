@@ -3,6 +3,7 @@ import getopt
 import os
 import re
 import sys
+import yaml
 from os.path import basename
 from pathlib import Path
 from blessings import Terminal
@@ -36,12 +37,12 @@ def find_projects(root_dir, marker_file):
     candidates = []
     for dirName, subdirList, fileList in os.walk(root_dir):
         if marker_file in fileList:
-            del subdirList[:]
+            del subdirList[:]  # Don't go on depth
             candidates.append(dirName)
     return candidates
 
 
-def find_event_receivers(module_dir):
+def find_event_subscriptions(module_dir):
     candidates = []
     target = basename(module_dir)
     for filename in Path(module_dir).rglob('*Handler.kt'):
@@ -57,7 +58,7 @@ def extract_event_subscriptions(filetext):
         yield m.group(1)
 
 
-def find_event_emitters(module_dir):
+def find_event_publications(module_dir):
     candidates = []
     origin = basename(module_dir)
     for filename in Path(module_dir).rglob('*.kt'):
@@ -69,10 +70,17 @@ def find_event_emitters(module_dir):
 
 def extract_event_publications(filetext):
     publish_regex = r'eventsEngine\s*?\.publish.*?\.to\(EventType\.(\w+)\)'
-    m = re.finditer(publish_regex, filetext, flags=re.DOTALL)
-    if m:
-        return m.group(1)
-    return None
+    for m in re.finditer(publish_regex, filetext, flags=re.DOTALL):
+        yield m.group(1)
+
+
+def find_ui_publications(root_dir):
+    resources_dir = '../edge/api-gateway/src/main/resources'
+    with open(os.path.join(root_dir, resources_dir, "apidoc.yml"), 'r') as stream:
+        doc = yaml.safe_load(stream)
+        for path, ops in doc['paths'].items():
+            for op, data in ops.items():
+                yield Node(subject='UI', event=data['operationId'])
 
 
 if __name__ == '__main__':
@@ -95,8 +103,8 @@ if __name__ == '__main__':
     print(term.blue('Event subscribers:'))
     for project_dir in projects_dirs:
         print(term.green(basename(project_dir)))
-        received = find_event_receivers(project_dir)
-        for node in received:
+        subscriptions = find_event_subscriptions(project_dir)
+        for node in subscriptions:
             print(f'  - {node.event}')
         print()
 
@@ -104,7 +112,16 @@ if __name__ == '__main__':
     print(term.blue('Event publishers:'))
     for project_dir in projects_dirs:
         print(term.green(basename(project_dir)))
-        received = find_event_receivers(project_dir)
-        for node in received:
+        publications = find_event_publications(project_dir)
+        for node in publications:
             print(f'  - {node.event}')
         print()
+
+    # Find UI events
+    print(term.blue('UI events:'))
+    publications = find_ui_publications(root_dir)
+    for node in publications:
+        print(f'  - {node.event}')
+    print()
+
+
