@@ -34,22 +34,18 @@ def readfile(filename):
 
 
 def find_projects(root_dir, marker_file):
-    candidates = []
     for dirName, subdirList, fileList in os.walk(root_dir):
         if marker_file in fileList:
             del subdirList[:]  # Don't go on depth
-            candidates.append(dirName)
-    return candidates
+            yield dirName
 
 
 def find_event_subscriptions(module_dir):
-    candidates = []
     target = basename(module_dir)
     for filename in Path(module_dir).rglob('*Handler.kt'):
         filetext = readfile(filename)
         for event in extract_event_subscriptions(filetext):
-            candidates.append(Node(subject=target, event=event))
-    return candidates
+            yield Node(subject=target, event=event)
 
 
 def extract_event_subscriptions(filetext):
@@ -59,13 +55,11 @@ def extract_event_subscriptions(filetext):
 
 
 def find_event_publications(module_dir):
-    candidates = []
     origin = basename(module_dir)
     for filename in Path(module_dir).rglob('*.kt'):
         filetext = readfile(filename)
         for event in extract_event_publications(filetext):
-            candidates.append(Node(subject=origin, event=event))
-    return candidates
+            yield Node(subject=origin, event=event)
 
 
 def extract_event_publications(filetext):
@@ -93,15 +87,14 @@ if __name__ == '__main__':
     print()
 
     # Find project dirs
-    projects_dirs = find_projects(root_dir, marker_file)
     print(term.blue('Found projects:'))
-    for project_dir in projects_dirs:
+    for project_dir in find_projects(root_dir, marker_file):
         print('  ' + basename(project_dir))
     print()
 
     # Find event subscribers
     print(term.blue('Event subscribers:'))
-    for project_dir in projects_dirs:
+    for project_dir in find_projects(root_dir, marker_file):
         print(term.green(basename(project_dir)))
         subscriptions = find_event_subscriptions(project_dir)
         for node in subscriptions:
@@ -110,7 +103,7 @@ if __name__ == '__main__':
 
     # Find event publishers
     print(term.blue('Event publishers:'))
-    for project_dir in projects_dirs:
+    for project_dir in find_projects(root_dir, marker_file):
         print(term.green(basename(project_dir)))
         publications = find_event_publications(project_dir)
         for node in publications:
