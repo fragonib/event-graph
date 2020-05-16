@@ -1,15 +1,16 @@
+import collections
 import getopt
 import os
 import re
 import sys
 from os.path import basename
 from pathlib import Path
-
 from blessings import Terminal
 
-MVN_DEPENDENCY_TREE_COMMAND = ['mvn', 'dependency:tree']
 
 term = Terminal()
+
+Node = collections.namedtuple('Node', 'subject event')
 
 
 def parse_options(args):
@@ -33,19 +34,19 @@ def find_projects(root_dir, marker_file):
     return candidates
 
 
-def find_event_receivers(root_dir):
+def find_event_receivers(module_dir):
     candidates = []
-    files = Path(root_dir).rglob('*Handler.kt')
-    for path in files:
-        event = extract_event_subscription(path)
+    target = basename(module_dir)
+    files = Path(module_dir).rglob('*Handler.kt')
+    for filename in files:
+        filetext = readfile(filename)
+        event = extract_event_subscription(filetext)
         if event:
-            candidates.append(event)
+            candidates.append(Node(subject=target, event=event))
     return candidates
 
 
-def extract_event_subscription(filename):
-
-    filetext = readfile(filename)
+def extract_event_subscription(filetext):
 
     listen_regex = r'init.*?\.to\(EventType\.(\w+)\).*?\}'
     m = re.search(listen_regex, filetext, flags=re.DOTALL)
@@ -59,6 +60,16 @@ def readfile(filename):
     filetext = textfile.read()
     textfile.close()
     return filetext
+
+
+def find_event_emitters(module_dir):
+    candidates = []
+    files = Path(module_dir).rglob('*.kt')
+    for path in files:
+        event = extract_event_subscription(path)
+        if event:
+            candidates.append(event)
+    return candidates
 
 
 if __name__ == '__main__':
@@ -82,6 +93,6 @@ if __name__ == '__main__':
     for project_dir in projects_dirs:
         print(term.green(basename(project_dir)))
         received = find_event_receivers(project_dir)
-        for event in received:
-            print('  - {event}'.format(event=event))
+        for node in received:
+            print(f'  - {node.event}')
         print()
