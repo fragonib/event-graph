@@ -25,6 +25,13 @@ def parse_options(args):
     return root_dir, marker_file
 
 
+def readfile(filename):
+    textfile = open(filename, 'r')
+    filetext = textfile.read()
+    textfile.close()
+    return filetext
+
+
 def find_projects(root_dir, marker_file):
     candidates = []
     for dirName, subdirList, fileList in os.walk(root_dir):
@@ -37,39 +44,35 @@ def find_projects(root_dir, marker_file):
 def find_event_receivers(module_dir):
     candidates = []
     target = basename(module_dir)
-    files = Path(module_dir).rglob('*Handler.kt')
-    for filename in files:
+    for filename in Path(module_dir).rglob('*Handler.kt'):
         filetext = readfile(filename)
-        event = extract_event_subscription(filetext)
-        if event:
+        for event in extract_event_subscriptions(filetext):
             candidates.append(Node(subject=target, event=event))
     return candidates
 
 
-def extract_event_subscription(filetext):
-
-    listen_regex = r'init.*?\.to\(EventType\.(\w+)\).*?\}'
-    m = re.search(listen_regex, filetext, flags=re.DOTALL)
-    if m:
-        return m.group(1)
-    return None
-
-
-def readfile(filename):
-    textfile = open(filename, 'r')
-    filetext = textfile.read()
-    textfile.close()
-    return filetext
+def extract_event_subscriptions(filetext):
+    subscribe_regex = r'eventsEngine\s*?\.subscribe.*?\.to\(EventType\.(\w+)\)'
+    for m in re.finditer(subscribe_regex, filetext, flags=re.DOTALL):
+        yield m.group(1)
 
 
 def find_event_emitters(module_dir):
     candidates = []
-    files = Path(module_dir).rglob('*.kt')
-    for path in files:
-        event = extract_event_subscription(path)
-        if event:
-            candidates.append(event)
+    origin = basename(module_dir)
+    for filename in Path(module_dir).rglob('*.kt'):
+        filetext = readfile(filename)
+        for event in extract_event_publications(filetext):
+            candidates.append(Node(subject=origin, event=event))
     return candidates
+
+
+def extract_event_publications(filetext):
+    publish_regex = r'eventsEngine\s*?\.publish.*?\.to\(EventType\.(\w+)\)'
+    m = re.finditer(publish_regex, filetext, flags=re.DOTALL)
+    if m:
+        return m.group(1)
+    return None
 
 
 if __name__ == '__main__':
@@ -88,8 +91,17 @@ if __name__ == '__main__':
         print('  ' + basename(project_dir))
     print()
 
-    # Check event receivers
-    print(term.blue('Event receivers:'))
+    # Find event subscribers
+    print(term.blue('Event subscribers:'))
+    for project_dir in projects_dirs:
+        print(term.green(basename(project_dir)))
+        received = find_event_receivers(project_dir)
+        for node in received:
+            print(f'  - {node.event}')
+        print()
+
+    # Find event publishers
+    print(term.blue('Event publishers:'))
     for project_dir in projects_dirs:
         print(term.green(basename(project_dir)))
         received = find_event_receivers(project_dir)
