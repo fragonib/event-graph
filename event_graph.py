@@ -138,14 +138,6 @@ def generate_event_graph(root_dir, marker_file):
     return transitions
 
 
-# digraph {
-#     a -> b[label="0.2",weight="0.2"];
-#     a -> c[label="0.4",weight="0.4"];
-#     c -> b[label="0.6",weight="0.6"];
-#     c -> e[label="0.6",weight="0.6"];
-#     e -> e[label="0.1",weight="0.1"];
-#     e -> b[label="0.7",weight="0.7"];
-# }
 def graphviz_exporter(transitions):
     print(term.blue('Graphviz:'))
     print('digraph {')
@@ -163,14 +155,7 @@ def json_exporter(graph):
 
 
 if __name__ == '__main__':
-
-    # Parse CLI options
     root_dir, marker_file = parse_options(sys.argv[1:])
-    print(term.blue('Selected options:'))
-    print(term.green(f'  Root folder: {root_dir}'))
-    print(term.green(f'  Marker file: {marker_file}'))
-    print()
-
     graph = generate_event_graph(root_dir, marker_file)
     graphviz_exporter(graph)
     json_exporter(graph)
