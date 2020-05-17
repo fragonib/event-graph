@@ -1,13 +1,10 @@
 import argparse
 import collections
-import itertools
+import json
 import os
 import re
 import sys
-from functools import reduce
-
 import yaml
-from pprint import pprint
 from os.path import basename
 from pathlib import Path
 from blessings import Terminal
@@ -155,6 +152,14 @@ def graphviz_exporter(transitions):
     for source, transition, target in transitions:
         print(f'   {source} -> {target}[label="{transition}"]')
     print('}')
+    print()
+
+
+def json_exporter(graph):
+    print(term.blue('Json graph:'))
+    edges = [trans._asdict() for trans in graph]
+    print(json.dumps(edges, indent=2))
+    print()
 
 
 if __name__ == '__main__':
@@ -168,5 +173,6 @@ if __name__ == '__main__':
 
     graph = generate_event_graph(root_dir, marker_file)
     graphviz_exporter(graph)
+    json_exporter(graph)
 
 
