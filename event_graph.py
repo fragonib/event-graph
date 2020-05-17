@@ -1,5 +1,5 @@
+import argparse
 import collections
-import getopt
 import os
 import re
 import sys
@@ -15,15 +15,11 @@ Node = collections.namedtuple('Node', 'subject event')
 
 
 def parse_options(args):
-    root_dir = None
-    marker_file = None
-    optlist, args = getopt.getopt(args, 'f:m:d:', '["folder=", "marker="]')
-    for o, a in optlist:
-        if o in ("-f", "--folder"):
-            root_dir = a
-        if o in ("-m", "--marker"):
-            marker_file = a
-    return root_dir, marker_file
+    parser = argparse.ArgumentParser(description="Script to generate event graph of HS modular")
+    parser.add_argument('-f', '--folder', help="An optional argument")
+    parser.add_argument('-m', '--marker', help="Marker file subfolder to be considered a module root")
+    args = parser.parse_args()
+    return args.folder, args.marker
 
 
 def readfile(filename):
@@ -36,7 +32,7 @@ def readfile(filename):
 def find_projects(root_dir, marker_file):
     for dirName, subdirList, fileList in os.walk(root_dir):
         if marker_file in fileList:
-            del subdirList[:]  # Don't go on depth
+            del subdirList[:]  # Once found marker file don't go on depth on FS
             yield dirName
 
 
@@ -77,6 +73,36 @@ def find_ui_publications(root_dir):
                 yield Node(subject='UI', event=data['operationId'])
 
 
+def found_nodes_and_edges():
+    # Find project dirs
+    print(term.blue('Found projects:'))
+    for project_dir in find_projects(root_dir, marker_file):
+        print('  ' + basename(project_dir))
+    print()
+    # Find event subscribers
+    print(term.blue('Event subscribers:'))
+    for project_dir in find_projects(root_dir, marker_file):
+        print(term.green(basename(project_dir)))
+        subscriptions = find_event_subscriptions(project_dir)
+        for node in subscriptions:
+            print(f'  - {node.event}')
+        print()
+    # Find event publishers
+    print(term.blue('Event publishers:'))
+    for project_dir in find_projects(root_dir, marker_file):
+        print(term.green(basename(project_dir)))
+        publications = find_event_publications(project_dir)
+        for node in publications:
+            print(f'  - {node.event}')
+        print()
+    # Find UI events
+    print(term.blue('UI events:'))
+    publications = find_ui_publications(root_dir)
+    for node in publications:
+        print(f'  - {node.event}')
+    print()
+
+
 if __name__ == '__main__':
 
     # Parse CLI options
@@ -86,35 +112,6 @@ if __name__ == '__main__':
     print(term.green('  Marker file: ') + marker_file)
     print()
 
-    # Find project dirs
-    print(term.blue('Found projects:'))
-    for project_dir in find_projects(root_dir, marker_file):
-        print('  ' + basename(project_dir))
-    print()
-
-    # Find event subscribers
-    print(term.blue('Event subscribers:'))
-    for project_dir in find_projects(root_dir, marker_file):
-        print(term.green(basename(project_dir)))
-        subscriptions = find_event_subscriptions(project_dir)
-        for node in subscriptions:
-            print(f'  - {node.event}')
-        print()
-
-    # Find event publishers
-    print(term.blue('Event publishers:'))
-    for project_dir in find_projects(root_dir, marker_file):
-        print(term.green(basename(project_dir)))
-        publications = find_event_publications(project_dir)
-        for node in publications:
-            print(f'  - {node.event}')
-        print()
-
-    # Find UI events
-    print(term.blue('UI events:'))
-    publications = find_ui_publications(root_dir)
-    for node in publications:
-        print(f'  - {node.event}')
-    print()
+    found_nodes_and_edges()
 
 
