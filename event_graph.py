@@ -1,9 +1,13 @@
 import argparse
 import collections
+import itertools
 import os
 import re
 import sys
+from functools import reduce
+
 import yaml
+from pprint import pprint
 from os.path import basename
 from pathlib import Path
 from blessings import Terminal
@@ -12,14 +16,15 @@ from blessings import Terminal
 term = Terminal()
 
 Node = collections.namedtuple('Node', 'subject event')
+Transition = collections.namedtuple('Transition', 'source event target')
 
 
 def parse_options(args):
     parser = argparse.ArgumentParser(description="Script to generate event graph of HS modular")
     parser.add_argument('-f', '--folder', help="An optional argument")
     parser.add_argument('-m', '--marker', help="Marker file subfolder to be considered a module root")
-    args = parser.parse_args()
-    return args.folder, args.marker
+    options = parser.parse_args(args)
+    return options.folder, options.marker
 
 
 def readfile(filename):
@@ -37,21 +42,25 @@ def find_projects(root_dir, marker_file):
 
 
 def find_event_subscriptions(module_dir):
-    target = basename(module_dir)
-    for filename in Path(module_dir).rglob('*Handler.kt'):
+    target = module_name(module_dir)
+    for filename in Path(module_dir).rglob('*.kt'):
         filetext = readfile(filename)
         for event in extract_event_subscriptions(filetext):
             yield Node(subject=target, event=event)
 
 
+def module_name(module_dir):
+    return basename(module_dir).upper()
+
+
 def extract_event_subscriptions(filetext):
-    subscribe_regex = r'eventsEngine\s*?\.subscribe.*?\.to\(EventType\.(\w+)\)'
+    subscribe_regex = r'eventsEngine\s*?\.subscribe\(.*?\)\s*?\.to\(EventType\.(\w+)\)'
     for m in re.finditer(subscribe_regex, filetext, flags=re.DOTALL):
         yield m.group(1)
 
 
 def find_event_publications(module_dir):
-    origin = basename(module_dir)
+    origin = module_name(module_dir)
     for filename in Path(module_dir).rglob('*.kt'):
         filetext = readfile(filename)
         for event in extract_event_publications(filetext):
@@ -73,28 +82,32 @@ def find_ui_publications(root_dir):
                 yield Node(subject='UI', event=data['operationId'])
 
 
-def found_nodes_and_edges():
+def found_nodes_and_edges(root_dir, marker_file):
+
     # Find project dirs
     print(term.blue('Found projects:'))
     for project_dir in find_projects(root_dir, marker_file):
-        print('  ' + basename(project_dir))
+        print('  ' + module_name(project_dir))
     print()
+
     # Find event subscribers
     print(term.blue('Event subscribers:'))
     for project_dir in find_projects(root_dir, marker_file):
-        print(term.green(basename(project_dir)))
+        print(term.green(module_name(project_dir)))
         subscriptions = find_event_subscriptions(project_dir)
         for node in subscriptions:
             print(f'  - {node.event}')
         print()
+
     # Find event publishers
     print(term.blue('Event publishers:'))
     for project_dir in find_projects(root_dir, marker_file):
-        print(term.green(basename(project_dir)))
+        print(term.green(module_name(project_dir)))
         publications = find_event_publications(project_dir)
         for node in publications:
             print(f'  - {node.event}')
         print()
+
     # Find UI events
     print(term.blue('UI events:'))
     publications = find_ui_publications(root_dir)
@@ -103,15 +116,57 @@ def found_nodes_and_edges():
     print()
 
 
+def generate_event_graph(root_dir, marker_file):
+
+    receivers = {}
+    for project_dir in find_projects(root_dir, marker_file):
+        for (receiver, event) in find_event_subscriptions(project_dir):
+            receivers.setdefault(event, []).append(receiver)
+
+    emitters = []
+    for project_dir in find_projects(root_dir, marker_file):
+        for node in find_event_publications(project_dir):
+            emitters.append(node)
+    for node in find_ui_publications(root_dir):
+        emitters.append(node)
+
+    transitions = []
+    for (source, event) in emitters:
+        try:
+            for target in receivers[event]:
+                transitions.append(Transition(source=source, event=event, target=target))
+        except KeyError as e:
+            print(f'There is no receiver of {event}')
+
+    return transitions
+
+
+# digraph {
+#     a -> b[label="0.2",weight="0.2"];
+#     a -> c[label="0.4",weight="0.4"];
+#     c -> b[label="0.6",weight="0.6"];
+#     c -> e[label="0.6",weight="0.6"];
+#     e -> e[label="0.1",weight="0.1"];
+#     e -> b[label="0.7",weight="0.7"];
+# }
+def graphviz_exporter(transitions):
+    print(term.blue('Graphviz:'))
+    print('digraph {')
+    for source, transition, target in transitions:
+        print(f'   {source} -> {target}[label="{transition}"]')
+    print('}')
+
+
 if __name__ == '__main__':
 
     # Parse CLI options
     root_dir, marker_file = parse_options(sys.argv[1:])
-    print(term.blue('Options:'))
-    print(term.green('  Root folder: ') + root_dir)
-    print(term.green('  Marker file: ') + marker_file)
+    print(term.blue('Selected options:'))
+    print(term.green(f'  Root folder: {root_dir}'))
+    print(term.green(f'  Marker file: {marker_file}'))
     print()
 
-    found_nodes_and_edges()
+    graph = generate_event_graph(root_dir, marker_file)
+    graphviz_exporter(graph)
 
 
