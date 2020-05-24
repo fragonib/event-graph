@@ -139,19 +139,17 @@ def generate_event_graph(root_dir, marker_file):
 
 
 def graphviz_exporter(transitions):
-    print(term.blue('Graphviz:'))
-    print('digraph {')
-    for source, transition, target in transitions:
-        print(f'   {source} -> {target}[label="{transition}"]')
-    print('}')
-    print()
+    with open('events.graph.dot', 'w') as dot_file:
+        dot_file.write('digraph {\n')
+        for source, transition, target in transitions:
+            dot_file.write(f'   {source} -> {target}[label="{transition}"]\n')
+        dot_file.write('}\n')
 
 
 def json_exporter(graph):
-    print(term.blue('Json graph:'))
-    edges = [trans._asdict() for trans in graph]
-    print(json.dumps(edges, indent=2))
-    print()
+    with open('events.graph.json', 'w') as json_file:
+        edges = [trans._asdict() for trans in graph]
+        json_file.write(json.dumps(edges, indent=2))
 
 
 if __name__ == '__main__':

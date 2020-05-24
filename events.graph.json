@@ -1,1003 +1,1052 @@
 [
-    {
-        "event": "RelevanceCalculated",
-        "source": "RELEVANCE",
-        "target": "SEARCH"
-    },
-    {
-        "event": "PaymentExecuted",
-        "source": "PAYMENTS",
-        "target": "PAYMENTS"
-    },
-    {
-        "event": "PaymentExecuted",
-        "source": "PAYMENTS",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "CalculateRelevance",
-        "source": "OPPORTUNITIES",
-        "target": "RELEVANCE"
-    },
-    {
-        "event": "OpportunityBacked",
-        "source": "OPPORTUNITIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "AddContact",
-        "source": "OPPORTUNITIES",
-        "target": "CONTACTS"
-    },
-    {
-        "event": "OpportunityConfirmed",
-        "source": "OPPORTUNITIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "FollowUpsInfoUpdated",
-        "source": "OPPORTUNITIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "PropertyOpportunityVisited",
-        "source": "OPPORTUNITIES",
-        "target": "ANALYTICS"
-    },
-    {
-        "event": "OpportunityPaid",
-        "source": "OPPORTUNITIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "CustomerInvoiceInfoUpdated",
-        "source": "OPPORTUNITIES",
-        "target": "INVOICES"
-    },
-    {
-        "event": "CustomerInvoiceInfoUpdated",
-        "source": "OPPORTUNITIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "CustomerInvoiceInfoUpdated",
-        "source": "OPPORTUNITIES",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "CustomerInvoiceInfoUpdated",
-        "source": "OPPORTUNITIES",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "GetFeatureFlagActive",
-        "source": "COMMONS",
-        "target": "FEATUREFLAGS"
-    },
-    {
-        "event": "PropertyReservationsUpdated",
-        "source": "RESERVATIONS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "PropertyReservationsUpdated",
-        "source": "RESERVATIONS",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetPropertiesByProviderId",
-        "source": "PROVIDERS",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetProviderQualifyingQuestions",
-        "source": "PROVIDERS",
-        "target": "QUALIFYING"
-    },
-    {
-        "event": "GetProviderUsualContact",
-        "source": "PROVIDERS",
-        "target": "CONTACTS"
-    },
-    {
-        "event": "GetProviderBaseContact",
-        "source": "PROVIDERS",
-        "target": "CONTACTS"
-    },
-    {
-        "event": "CreateProviderBaseContact",
-        "source": "PROVIDERS",
-        "target": "CONTACTS"
-    },
-    {
-        "event": "ProviderCreated",
-        "source": "PROVIDERS",
-        "target": "BUSINESSEVENTS"
-    },
-    {
-        "event": "ProviderCreated",
-        "source": "PROVIDERS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "ProviderBasicInfoUpdated",
-        "source": "PROVIDERS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "UpdateProviderBaseContact",
-        "source": "PROVIDERS",
-        "target": "CONTACTS"
-    },
-    {
-        "event": "ProviderConditionsUpdated",
-        "source": "PROVIDERS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "ProviderAvailabilityChecked",
-        "source": "PROVIDERS",
-        "target": "BUSINESSEVENTS"
-    },
-    {
-        "event": "ProviderInvoiceInfoUpdated",
-        "source": "PROVIDERS",
-        "target": "PROVIDERS"
-    },
-    {
-        "event": "ProviderInvoiceInfoUpdated",
-        "source": "PROVIDERS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "UpdateContactInvoiceInfo",
-        "source": "PROVIDERS",
-        "target": "CONTACTS"
-    },
-    {
-        "event": "GetContactInvoiceInfo",
-        "source": "PROVIDERS",
-        "target": "CONTACTS"
-    },
-    {
-        "event": "ContactAdded",
-        "source": "CONTACTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "ContactAdded",
-        "source": "CONTACTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "UpdateCompanyTermsAndConditions",
-        "source": "CONTACTS",
-        "target": "COMPANIES"
-    },
-    {
-        "event": "ContactAdded",
-        "source": "CONTACTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "ContactAdded",
-        "source": "CONTACTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "ContactAdded",
-        "source": "CONTACTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "ContactAdded",
-        "source": "CONTACTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "ContactAdded",
-        "source": "CONTACTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "ContactAdded",
-        "source": "CONTACTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "ContactInvoiceInfoUpdated",
-        "source": "CONTACTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "GetFeatureFlags",
-        "source": "ADMIN",
-        "target": "FEATUREFLAGS"
-    },
-    {
-        "event": "ProposalCreated",
-        "source": "ADMIN",
-        "target": "BUSINESSEVENTS"
-    },
-    {
-        "event": "ProposalCreated",
-        "source": "ADMIN",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "ProposalCreated",
-        "source": "ADMIN",
-        "target": "ANALYTICS"
-    },
-    {
-        "event": "CreateProposal",
-        "source": "TYPEFORM",
-        "target": "PROPOSALS"
-    },
-    {
-        "event": "SearchOpportunities",
-        "source": "AGENTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "AssignedRequest",
-        "source": "AGENTS",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "SearchRequests",
-        "source": "AGENTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "BasicRequestDataUpdated",
-        "source": "REQUESTS",
-        "target": "SEARCH"
-    },
-    {
-        "event": "PropertyBasicInfoUpdated",
-        "source": "PROPERTIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "PropertyCreated",
-        "source": "PROPERTIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "PropertyPublicationStatusUpdated",
-        "source": "PROPERTIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "TagEntity",
-        "source": "PROPERTIES",
-        "target": "TAGGING"
-    },
-    {
-        "event": "GetTaggedEntities",
-        "source": "PROPERTIES",
-        "target": "TAGGING"
-    },
-    {
-        "event": "GetRelevance",
-        "source": "PROPERTIES",
-        "target": "RELEVANCE"
-    },
-    {
-        "event": "PropertyAmenitiesUpdated",
-        "source": "PROPERTIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "PropertyPictureDeleted",
-        "source": "PROPERTIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "PropertyMainPictureUpdated",
-        "source": "PROPERTIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "PropertyPriceUpdated",
-        "source": "PROPERTIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "GetFeatureFlag",
-        "source": "NOTIFICATIONS",
-        "target": "FEATUREFLAGS"
-    },
-    {
-        "event": "CompanyTermsAndConditionsUpdated",
-        "source": "COMPANIES",
-        "target": "SEARCH"
-    },
-    {
-        "event": "CalculateRelevance",
-        "source": "PROPOSALS",
-        "target": "RELEVANCE"
-    },
-    {
-        "event": "GetRelevance",
-        "source": "PROPOSALS",
-        "target": "RELEVANCE"
-    },
-    {
-        "event": "ProposalCreated",
-        "source": "PROPOSALS",
-        "target": "BUSINESSEVENTS"
-    },
-    {
-        "event": "ProposalCreated",
-        "source": "PROPOSALS",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "ProposalCreated",
-        "source": "PROPOSALS",
-        "target": "ANALYTICS"
-    },
-    {
-        "event": "CalculateRelevance",
-        "source": "PROPOSALS",
-        "target": "RELEVANCE"
-    },
-    {
-        "event": "SearchProperties",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "CreateNewProperty",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetPublicProperties",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetEnalquilerProperties",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetTrovitProperties",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetTucasaProperties",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "PostIdealistaProperties",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetPublicProperty",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "BatchQueryProperties",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetSimilarProperties",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "TagEnalquilerProperty",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "TagPublicProperty",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "UpdatePropertyBasicInfo",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetPropertyBasicInfo",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "UpdatePropertyAmenities",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetPropertyAmenities",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "UpdatePropertyPrice",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetPropertyPrice",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetPropertyIcal",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "UpdatePropertyIcal",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetPropertyPicturesData",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "UpdatePropertyMainPicture",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "DeletePropertyPicture",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "GetPropertyByProviderId",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "CreateOpportunity",
-        "source": "UI",
-        "target": "OPPORTUNITIES"
-    },
-    {
-        "event": "SearchOpportunities",
-        "source": "UI",
-        "target": "SEARCH"
-    },
-    {
-        "event": "OpportunityRequestDataConfirmation",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "OpportunityCreated",
-        "source": "UI",
-        "target": "ANALYTICS"
-    },
-    {
-        "event": "CheckInOpportunityEvent",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "CheckInOpportunityEvent",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "BackOpportunity",
-        "source": "UI",
-        "target": "OPPORTUNITIES"
-    },
-    {
-        "event": "ConfirmOpportunity",
-        "source": "UI",
-        "target": "OPPORTUNITIES"
-    },
-    {
-        "event": "PayOpportunity",
-        "source": "UI",
-        "target": "OPPORTUNITIES"
-    },
-    {
-        "event": "UpdateCustomerInvoiceInfo",
-        "source": "UI",
-        "target": "OPPORTUNITIES"
-    },
-    {
-        "event": "AddRedsysPayment",
-        "source": "UI",
-        "target": "PAYMENTS"
-    },
-    {
-        "event": "GetOpportunityPayments",
-        "source": "UI",
-        "target": "PAYMENTS"
-    },
-    {
-        "event": "VisitPropertyOpportunity",
-        "source": "UI",
-        "target": "OPPORTUNITIES"
-    },
-    {
-        "event": "GetVisitedPropertyOpportunity",
-        "source": "UI",
-        "target": "OPPORTUNITIES"
-    },
-    {
-        "event": "SendAvailabilityQuery",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "GetProposals",
-        "source": "UI",
-        "target": "PROPOSALS"
-    },
-    {
-        "event": "AllProposalsRejected",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "OpportunityLost",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "OpportunityLostRecover",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "CreateProposal",
-        "source": "UI",
-        "target": "PROPOSALS"
-    },
-    {
-        "event": "SearchProposals",
-        "source": "UI",
-        "target": "SEARCH"
-    },
-    {
-        "event": "ProposalCreated",
-        "source": "UI",
-        "target": "BUSINESSEVENTS"
-    },
-    {
-        "event": "ProposalCreated",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "ProposalCreated",
-        "source": "UI",
-        "target": "ANALYTICS"
-    },
-    {
-        "event": "RejectedProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "TwoDaysToCheckinProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "TwoDaysToCheckinProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "CheckinInProgressProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "ThreeDaysToMonthlyPaymentProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "ThreeDaysToMonthlyPaymentProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "ThreeDaysToMonthlyPaymentProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "ThreeDaysToMonthlyPaymentProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "FiveDaysToCheckoutProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "FiveDaysToCheckoutProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "OneDayAfterCheckoutProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "OneDayAfterCheckoutProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "ContractCreated",
-        "source": "UI",
-        "target": "INVOICES"
-    },
-    {
-        "event": "PostProposalsRelevance",
-        "source": "UI",
-        "target": "PROPOSALS"
-    },
-    {
-        "event": "SendProposalConfirmation",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "AcceptedProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "SendProposals",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "FirstFollowUp",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "SecondFollowUp",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "QualityClientProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "QualityProviderProposal",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "GetAgents",
-        "source": "UI",
-        "target": "AGENTS"
-    },
-    {
-        "event": "AgentAutoAssignment",
-        "source": "UI",
-        "target": "AGENTS"
-    },
-    {
-        "event": "Notify",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "ContentfulEvent",
-        "source": "UI",
-        "target": "CONTENTFUL"
-    },
-    {
-        "event": "ContentfulGetGeneralConditions",
-        "source": "UI",
-        "target": "CONTENTFUL"
-    },
-    {
-        "event": "ContentfulGetPrivacyPolicy",
-        "source": "UI",
-        "target": "CONTENTFUL"
-    },
-    {
-        "event": "SearchRequests",
-        "source": "UI",
-        "target": "SEARCH"
-    },
-    {
-        "event": "UserLogin",
-        "source": "UI",
-        "target": "USERS"
-    },
-    {
-        "event": "UpdateBasicRequestData",
-        "source": "UI",
-        "target": "REQUESTS"
-    },
-    {
-        "event": "AssignedRequest",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "CreateProvider",
-        "source": "UI",
-        "target": "PROVIDERS"
-    },
-    {
-        "event": "CheckProviderAvailability",
-        "source": "UI",
-        "target": "PROVIDERS"
-    },
-    {
-        "event": "UpdateProviderInvoiceInfo",
-        "source": "UI",
-        "target": "PROVIDERS"
-    },
-    {
-        "event": "GetProviderInvoiceInfo",
-        "source": "UI",
-        "target": "PROVIDERS"
-    },
-    {
-        "event": "UpdateProviderConditions",
-        "source": "UI",
-        "target": "PROVIDERS"
-    },
-    {
-        "event": "GetProviderConditions",
-        "source": "UI",
-        "target": "PROVIDERS"
-    },
-    {
-        "event": "UpdateProviderBasicInfo",
-        "source": "UI",
-        "target": "PROVIDERS"
-    },
-    {
-        "event": "GetProviderBasicInfo",
-        "source": "UI",
-        "target": "PROVIDERS"
-    },
-    {
-        "event": "AddProviderQualifyingQuestions",
-        "source": "UI",
-        "target": "QUALIFYING"
-    },
-    {
-        "event": "GetProviderQualifyingQuestions",
-        "source": "UI",
-        "target": "QUALIFYING"
-    },
-    {
-        "event": "GetPropertiesByProviderHomyspaceReference",
-        "source": "UI",
-        "target": "PROVIDERS"
-    },
-    {
-        "event": "Admin_DisableProvider",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "Admin_EnableProvider",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "Admin_UpdateProviderUsesICal",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "Admin_UpdateProviderPriceType",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "Admin_UpdateProviderCommissionPercentage",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "Admin_UpdateProviderBillable",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "Admin_GenerateHangoutsLink",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "Admin_UpdatePropertyPrice",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "Admin_MigrateOrigin",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "Admin_MigratePropertyPublicationStatus",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "Admin_UpdateAvailabilityIndex",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "Admin_GetFeatureFlags",
-        "source": "UI",
-        "target": "ADMIN"
-    },
-    {
-        "event": "BusinessEventCreated",
-        "source": "UI",
-        "target": "OPPORTUNITIES"
-    },
-    {
-        "event": "BusinessEventCreated",
-        "source": "UI",
-        "target": "OPPORTUNITIES"
-    },
-    {
-        "event": "GetFeatureFlags",
-        "source": "UI",
-        "target": "FEATUREFLAGS"
-    },
-    {
-        "event": "SaveFeatureFlag",
-        "source": "UI",
-        "target": "FEATUREFLAGS"
-    },
-    {
-        "event": "GetFeatureFlag",
-        "source": "UI",
-        "target": "FEATUREFLAGS"
-    },
-    {
-        "event": "GetFeatureFlagActive",
-        "source": "UI",
-        "target": "FEATUREFLAGS"
-    },
-    {
-        "event": "InvoicePaid",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "InvoicePaid",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "InvoicePaid",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "InvoicePaid",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "AddCompanyQualifyingQuestions",
-        "source": "UI",
-        "target": "QUALIFYING"
-    },
-    {
-        "event": "GetCompanyQualifyingQuestions",
-        "source": "UI",
-        "target": "QUALIFYING"
-    },
-    {
-        "event": "CreateReservation",
-        "source": "UI",
-        "target": "RESERVATIONS"
-    },
-    {
-        "event": "GetReservations",
-        "source": "UI",
-        "target": "RESERVATIONS"
-    },
-    {
-        "event": "UpdateReservation",
-        "source": "UI",
-        "target": "RESERVATIONS"
-    },
-    {
-        "event": "DeleteReservation",
-        "source": "UI",
-        "target": "RESERVATIONS"
-    },
-    {
-        "event": "GetReservation",
-        "source": "UI",
-        "target": "RESERVATIONS"
-    },
-    {
-        "event": "GenerateAvailabilityLandingLink",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "AddOpportunityReservation",
-        "source": "UI",
-        "target": "RESERVATIONS"
-    },
-    {
-        "event": "OpportunityReservationIntentionAdded",
-        "source": "UI",
-        "target": "NOTIFICATIONS"
-    },
-    {
-        "event": "AddProposalReservation",
-        "source": "UI",
-        "target": "RESERVATIONS"
-    },
-    {
-        "event": "DeleteProposalReservation",
-        "source": "UI",
-        "target": "RESERVATIONS"
-    },
-    {
-        "event": "ChangePublicationStatus",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "ChangePublicationStatus",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "SearchProperties",
-        "source": "UI",
-        "target": "PROPERTIES"
-    },
-    {
-        "event": "PropertyPricingStatisticsCommand",
-        "source": "UI",
-        "target": "PRICING"
-    },
-    {
-        "event": "AddProviderUsualContact",
-        "source": "UI",
-        "target": "CONTACTS"
-    },
-    {
-        "event": "GetProviderUsualContact",
-        "source": "UI",
-        "target": "CONTACTS"
-    },
-    {
-        "event": "GenerateProposalFromTypeform",
-        "source": "UI",
-        "target": "TYPEFORM"
-    }
+  {
+    "source": "RELEVANCE",
+    "event": "OpportunityScoreCalculated",
+    "target": "ANALYTICS"
+  },
+  {
+    "source": "RELEVANCE",
+    "event": "RelevanceCalculated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PAYMENTS",
+    "event": "PaymentExecuted",
+    "target": "PAYMENTS"
+  },
+  {
+    "source": "PAYMENTS",
+    "event": "PaymentExecuted",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "OPPORTUNITIES",
+    "event": "CalculateRelevance",
+    "target": "RELEVANCE"
+  },
+  {
+    "source": "OPPORTUNITIES",
+    "event": "OpportunityBacked",
+    "target": "SEARCH"
+  },
+  {
+    "source": "OPPORTUNITIES",
+    "event": "AddContact",
+    "target": "CONTACTS"
+  },
+  {
+    "source": "OPPORTUNITIES",
+    "event": "OpportunityConfirmed",
+    "target": "SEARCH"
+  },
+  {
+    "source": "OPPORTUNITIES",
+    "event": "FollowUpsInfoUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "OPPORTUNITIES",
+    "event": "PropertyOpportunityVisited",
+    "target": "ANALYTICS"
+  },
+  {
+    "source": "OPPORTUNITIES",
+    "event": "OpportunityPaid",
+    "target": "SEARCH"
+  },
+  {
+    "source": "OPPORTUNITIES",
+    "event": "CustomerInvoiceInfoUpdated",
+    "target": "INVOICES"
+  },
+  {
+    "source": "OPPORTUNITIES",
+    "event": "CustomerInvoiceInfoUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "OPPORTUNITIES",
+    "event": "CustomerInvoiceInfoUpdated",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "OPPORTUNITIES",
+    "event": "CustomerInvoiceInfoUpdated",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "COMMONS",
+    "event": "GetFeatureFlagActive",
+    "target": "FEATUREFLAGS"
+  },
+  {
+    "source": "RESERVATIONS",
+    "event": "PropertyReservationsUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "RESERVATIONS",
+    "event": "PropertyReservationsUpdated",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "GetPropertiesByProviderId",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "GetProviderQualifyingQuestions",
+    "target": "QUALIFYING"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "GetProviderUsualContact",
+    "target": "CONTACTS"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "GetProviderBaseContact",
+    "target": "CONTACTS"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "CreateProviderBaseContact",
+    "target": "CONTACTS"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ProviderCreated",
+    "target": "BUSINESSEVENTS"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ProviderCreated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ProviderBasicInfoUpdated",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ProviderBasicInfoUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "UpdateProviderBaseContact",
+    "target": "CONTACTS"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ProviderConditionsUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ProviderAvailabilityChecked",
+    "target": "BUSINESSEVENTS"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ProviderInvoiceInfoUpdated",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ProviderInvoiceInfoUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "UpdateContactInvoiceInfo",
+    "target": "CONTACTS"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "GetContactInvoiceInfo",
+    "target": "CONTACTS"
+  },
+  {
+    "source": "CONTACTS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "CONTACTS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "CONTACTS",
+    "event": "UpdateCompanyTermsAndConditions",
+    "target": "COMPANIES"
+  },
+  {
+    "source": "CONTACTS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "CONTACTS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "CONTACTS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "CONTACTS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "CONTACTS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "CONTACTS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "CONTACTS",
+    "event": "ContactInvoiceInfoUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "ADMIN",
+    "event": "GetFeatureFlags",
+    "target": "FEATUREFLAGS"
+  },
+  {
+    "source": "ADMIN",
+    "event": "ProposalCreated",
+    "target": "BUSINESSEVENTS"
+  },
+  {
+    "source": "ADMIN",
+    "event": "ProposalCreated",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "ADMIN",
+    "event": "ProposalCreated",
+    "target": "ANALYTICS"
+  },
+  {
+    "source": "TYPEFORM",
+    "event": "CreateProposal",
+    "target": "PROPOSALS"
+  },
+  {
+    "source": "AGENTS",
+    "event": "SearchOpportunities",
+    "target": "SEARCH"
+  },
+  {
+    "source": "AGENTS",
+    "event": "AssignedRequest",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "AGENTS",
+    "event": "SearchRequests",
+    "target": "SEARCH"
+  },
+  {
+    "source": "REQUESTS",
+    "event": "BasicRequestDataUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROPERTIES",
+    "event": "PropertyBasicInfoUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROPERTIES",
+    "event": "PropertyDeleted",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROPERTIES",
+    "event": "PropertyCreated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROPERTIES",
+    "event": "PropertyPublicationStatusUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROPERTIES",
+    "event": "TagEntity",
+    "target": "TAGGING"
+  },
+  {
+    "source": "PROPERTIES",
+    "event": "GetTaggedEntities",
+    "target": "TAGGING"
+  },
+  {
+    "source": "PROPERTIES",
+    "event": "GetRelevance",
+    "target": "RELEVANCE"
+  },
+  {
+    "source": "PROPERTIES",
+    "event": "PropertyAmenitiesUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROPERTIES",
+    "event": "PropertyPictureDeleted",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROPERTIES",
+    "event": "PropertyMainPictureUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROPERTIES",
+    "event": "PropertyPriceUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "NOTIFICATIONS",
+    "event": "GetFeatureFlag",
+    "target": "FEATUREFLAGS"
+  },
+  {
+    "source": "COMPANIES",
+    "event": "CompanyTermsAndConditionsUpdated",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROPOSALS",
+    "event": "CalculateRelevance",
+    "target": "RELEVANCE"
+  },
+  {
+    "source": "PROPOSALS",
+    "event": "GetRelevance",
+    "target": "RELEVANCE"
+  },
+  {
+    "source": "PROPOSALS",
+    "event": "ProposalCreated",
+    "target": "BUSINESSEVENTS"
+  },
+  {
+    "source": "PROPOSALS",
+    "event": "ProposalCreated",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "PROPOSALS",
+    "event": "ProposalCreated",
+    "target": "ANALYTICS"
+  },
+  {
+    "source": "PROPOSALS",
+    "event": "CalculateRelevance",
+    "target": "RELEVANCE"
+  },
+  {
+    "source": "UI",
+    "event": "SearchProperties",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "CreateNewProperty",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetPublicProperties",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetEnalquilerProperties",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetTrovitProperties",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetTucasaProperties",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "PostIdealistaProperties",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetPublicProperty",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "BatchQueryProperties",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetSimilarProperties",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "TagEnalquilerProperty",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "TagPublicProperty",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "DeleteProperty",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "UpdatePropertyBasicInfo",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetPropertyBasicInfo",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "UpdatePropertyAmenities",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetPropertyAmenities",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "UpdatePropertyPrice",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetPropertyPrice",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetPropertyIcal",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "UpdatePropertyIcal",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetPropertyPicturesData",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "UpdatePropertyMainPicture",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "DeletePropertyPicture",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetPropertyByProviderId",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "CreateOpportunity",
+    "target": "OPPORTUNITIES"
+  },
+  {
+    "source": "UI",
+    "event": "SearchOpportunities",
+    "target": "SEARCH"
+  },
+  {
+    "source": "UI",
+    "event": "OpportunityRequestDataConfirmation",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "OpportunityCreated",
+    "target": "RELEVANCE"
+  },
+  {
+    "source": "UI",
+    "event": "CheckInOpportunityEvent",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "CheckInOpportunityEvent",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "BackOpportunity",
+    "target": "OPPORTUNITIES"
+  },
+  {
+    "source": "UI",
+    "event": "ConfirmOpportunity",
+    "target": "OPPORTUNITIES"
+  },
+  {
+    "source": "UI",
+    "event": "PayOpportunity",
+    "target": "OPPORTUNITIES"
+  },
+  {
+    "source": "UI",
+    "event": "UpdateCustomerInvoiceInfo",
+    "target": "OPPORTUNITIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetOpportunityScore",
+    "target": "RELEVANCE"
+  },
+  {
+    "source": "UI",
+    "event": "AddRedsysPayment",
+    "target": "PAYMENTS"
+  },
+  {
+    "source": "UI",
+    "event": "GetOpportunityPayments",
+    "target": "PAYMENTS"
+  },
+  {
+    "source": "UI",
+    "event": "VisitPropertyOpportunity",
+    "target": "OPPORTUNITIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetVisitedPropertyOpportunity",
+    "target": "OPPORTUNITIES"
+  },
+  {
+    "source": "UI",
+    "event": "SendAvailabilityQuery",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "GetProposals",
+    "target": "PROPOSALS"
+  },
+  {
+    "source": "UI",
+    "event": "AllProposalsRejected",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "OpportunityLost",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "OpportunityLostRecover",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "SearchProposals",
+    "target": "SEARCH"
+  },
+  {
+    "source": "UI",
+    "event": "CreateProposal",
+    "target": "PROPOSALS"
+  },
+  {
+    "source": "UI",
+    "event": "ProposalCreated",
+    "target": "BUSINESSEVENTS"
+  },
+  {
+    "source": "UI",
+    "event": "ProposalCreated",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "ProposalCreated",
+    "target": "ANALYTICS"
+  },
+  {
+    "source": "UI",
+    "event": "SendProposalConfirmation",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "PreparingProposal",
+    "target": "ANALYTICS"
+  },
+  {
+    "source": "UI",
+    "event": "AcceptedProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "AcceptedProposal",
+    "target": "ANALYTICS"
+  },
+  {
+    "source": "UI",
+    "event": "ShippedProposal",
+    "target": "ANALYTICS"
+  },
+  {
+    "source": "UI",
+    "event": "RejectedProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "RejectedProposal",
+    "target": "ANALYTICS"
+  },
+  {
+    "source": "UI",
+    "event": "RecoveringProposal",
+    "target": "ANALYTICS"
+  },
+  {
+    "source": "UI",
+    "event": "ContractCreated",
+    "target": "INVOICES"
+  },
+  {
+    "source": "UI",
+    "event": "PostProposalsRelevance",
+    "target": "PROPOSALS"
+  },
+  {
+    "source": "UI",
+    "event": "SendProposals",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "TwoDaysToCheckinProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "TwoDaysToCheckinProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "CheckinInProgressProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "ThreeDaysToMonthlyPaymentProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "ThreeDaysToMonthlyPaymentProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "ThreeDaysToMonthlyPaymentProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "ThreeDaysToMonthlyPaymentProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "FiveDaysToCheckoutProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "FiveDaysToCheckoutProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "OneDayAfterCheckoutProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "OneDayAfterCheckoutProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "FirstFollowUp",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "SecondFollowUp",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "QualityClientProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "QualityProviderProposal",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "GetAgents",
+    "target": "AGENTS"
+  },
+  {
+    "source": "UI",
+    "event": "AgentAutoAssignment",
+    "target": "AGENTS"
+  },
+  {
+    "source": "UI",
+    "event": "Notify",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "ContentfulEvent",
+    "target": "CONTENTFUL"
+  },
+  {
+    "source": "UI",
+    "event": "ContentfulGetGeneralConditions",
+    "target": "CONTENTFUL"
+  },
+  {
+    "source": "UI",
+    "event": "ContentfulGetPrivacyPolicy",
+    "target": "CONTENTFUL"
+  },
+  {
+    "source": "UI",
+    "event": "SearchRequests",
+    "target": "SEARCH"
+  },
+  {
+    "source": "UI",
+    "event": "UserLogin",
+    "target": "USERS"
+  },
+  {
+    "source": "UI",
+    "event": "UpdateBasicRequestData",
+    "target": "REQUESTS"
+  },
+  {
+    "source": "UI",
+    "event": "AssignedRequest",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "CreateProvider",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "UI",
+    "event": "CheckProviderAvailability",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "UI",
+    "event": "UpdateProviderInvoiceInfo",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "UI",
+    "event": "GetProviderInvoiceInfo",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "UI",
+    "event": "UpdateProviderConditions",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "UI",
+    "event": "GetProviderConditions",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "UI",
+    "event": "UpdateProviderBasicInfo",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "UI",
+    "event": "GetProviderBasicInfo",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "UI",
+    "event": "AddProviderQualifyingQuestions",
+    "target": "QUALIFYING"
+  },
+  {
+    "source": "UI",
+    "event": "GetProviderQualifyingQuestions",
+    "target": "QUALIFYING"
+  },
+  {
+    "source": "UI",
+    "event": "GetPropertiesByProviderHomyspaceReference",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_DisableProvider",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_EnableProvider",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_UpdateProviderUsesICal",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_UpdateProviderPriceType",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_UpdateProviderCommissionPercentage",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_UpdateProviderBillable",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_GenerateHangoutsLink",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_UpdatePropertyPrice",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_MigrateOrigin",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_MigratePropertyPublicationStatus",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_UpdateAvailabilityIndex",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "Admin_GetFeatureFlags",
+    "target": "ADMIN"
+  },
+  {
+    "source": "UI",
+    "event": "BusinessEventCreated",
+    "target": "OPPORTUNITIES"
+  },
+  {
+    "source": "UI",
+    "event": "BusinessEventCreated",
+    "target": "OPPORTUNITIES"
+  },
+  {
+    "source": "UI",
+    "event": "GetFeatureFlags",
+    "target": "FEATUREFLAGS"
+  },
+  {
+    "source": "UI",
+    "event": "SaveFeatureFlag",
+    "target": "FEATUREFLAGS"
+  },
+  {
+    "source": "UI",
+    "event": "GetFeatureFlag",
+    "target": "FEATUREFLAGS"
+  },
+  {
+    "source": "UI",
+    "event": "GetFeatureFlagActive",
+    "target": "FEATUREFLAGS"
+  },
+  {
+    "source": "UI",
+    "event": "InvoicePaid",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "InvoicePaid",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "InvoicePaid",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "InvoicePaid",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "AddCompanyQualifyingQuestions",
+    "target": "QUALIFYING"
+  },
+  {
+    "source": "UI",
+    "event": "GetCompanyQualifyingQuestions",
+    "target": "QUALIFYING"
+  },
+  {
+    "source": "UI",
+    "event": "CreateReservation",
+    "target": "RESERVATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "GetReservations",
+    "target": "RESERVATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "UpdateReservation",
+    "target": "RESERVATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "DeleteReservation",
+    "target": "RESERVATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "GetReservation",
+    "target": "RESERVATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "GenerateAvailabilityLandingLink",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "AddOpportunityReservation",
+    "target": "RESERVATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "OpportunityReservationIntentionAdded",
+    "target": "NOTIFICATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "AddProposalReservation",
+    "target": "RESERVATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "DeleteProposalReservation",
+    "target": "RESERVATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "ChangePublicationStatus",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "ChangePublicationStatus",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "SearchProperties",
+    "target": "PROPERTIES"
+  },
+  {
+    "source": "UI",
+    "event": "PropertyPricingStatisticsCommand",
+    "target": "PRICING"
+  },
+  {
+    "source": "UI",
+    "event": "AddProviderUsualContact",
+    "target": "CONTACTS"
+  },
+  {
+    "source": "UI",
+    "event": "GetProviderUsualContact",
+    "target": "CONTACTS"
+  },
+  {
+    "source": "UI",
+    "event": "GenerateProposalFromTypeform",
+    "target": "TYPEFORM"
+  }
 ]
-
