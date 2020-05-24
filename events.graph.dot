@@ -60,6 +60,7 @@ digraph {
    PROPERTIES -> TAGGING[label="GetTaggedEntities"]
    PROPERTIES -> RELEVANCE[label="GetRelevance"]
    PROPERTIES -> SEARCH[label="PropertyAmenitiesUpdated"]
+   PROPERTIES -> DEV_NULL[label="PropertyIcalUpdated"]
    PROPERTIES -> SEARCH[label="PropertyPictureDeleted"]
    PROPERTIES -> SEARCH[label="PropertyMainPictureUpdated"]
    PROPERTIES -> SEARCH[label="PropertyPriceUpdated"]

@@ -132,8 +132,9 @@ def generate_event_graph(root_dir, marker_file):
         try:
             for target in receivers[event]:
                 transitions.append(Transition(source=source, event=event, target=target))
-        except KeyError as e:
+        except KeyError:
             print(f'There is no receiver of {event}')
+            transitions.append(Transition(source=source, event=event, target='DEV_NULL'))
 
     return transitions
 

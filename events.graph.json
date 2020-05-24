@@ -306,6 +306,11 @@
   },
   {
     "source": "PROPERTIES",
+    "event": "PropertyIcalUpdated",
+    "target": "DEV_NULL"
+  },
+  {
+    "source": "PROPERTIES",
     "event": "PropertyPictureDeleted",
     "target": "SEARCH"
   },
