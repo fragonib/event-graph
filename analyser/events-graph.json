@@ -1,6 +1,11 @@
 [
   {
     "source": "RELEVANCE",
+    "event": "SearchProperties",
+    "target": "SEARCH"
+  },
+  {
+    "source": "RELEVANCE",
     "event": "OpportunityScoreCalculated",
     "target": "ANALYTICS"
   },
@@ -32,7 +37,7 @@
   {
     "source": "OPPORTUNITIES",
     "event": "AddContact",
-    "target": "CONTACTS"
+    "target": "COMPANIES"
   },
   {
     "source": "OPPORTUNITIES",
@@ -75,9 +80,19 @@
     "target": "NOTIFICATIONS"
   },
   {
+    "source": "INVOICES",
+    "event": "ContactInvoiceInfoUpdated",
+    "target": "SEARCH"
+  },
+  {
     "source": "COMMONS",
     "event": "GetFeatureFlagActive",
     "target": "FEATUREFLAGS"
+  },
+  {
+    "source": "RESERVATIONS",
+    "event": "PropertyReservationsUpdated",
+    "target": "SEARCH"
   },
   {
     "source": "RESERVATIONS",
@@ -101,18 +116,8 @@
   },
   {
     "source": "PROVIDERS",
-    "event": "GetProviderUsualContact",
-    "target": "CONTACTS"
-  },
-  {
-    "source": "PROVIDERS",
-    "event": "GetProviderBaseContact",
-    "target": "CONTACTS"
-  },
-  {
-    "source": "PROVIDERS",
     "event": "CreateProviderBaseContact",
-    "target": "CONTACTS"
+    "target": "PROVIDERS"
   },
   {
     "source": "PROVIDERS",
@@ -136,8 +141,33 @@
   },
   {
     "source": "PROVIDERS",
-    "event": "UpdateProviderBaseContact",
-    "target": "CONTACTS"
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "PROVIDERS",
+    "event": "ContactAdded",
+    "target": "SEARCH"
   },
   {
     "source": "PROVIDERS",
@@ -162,62 +192,12 @@
   {
     "source": "PROVIDERS",
     "event": "UpdateContactInvoiceInfo",
-    "target": "CONTACTS"
+    "target": "INVOICES"
   },
   {
     "source": "PROVIDERS",
     "event": "GetContactInvoiceInfo",
-    "target": "CONTACTS"
-  },
-  {
-    "source": "CONTACTS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
-  },
-  {
-    "source": "CONTACTS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
-  },
-  {
-    "source": "CONTACTS",
-    "event": "UpdateCompanyTermsAndConditions",
-    "target": "COMPANIES"
-  },
-  {
-    "source": "CONTACTS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
-  },
-  {
-    "source": "CONTACTS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
-  },
-  {
-    "source": "CONTACTS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
-  },
-  {
-    "source": "CONTACTS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
-  },
-  {
-    "source": "CONTACTS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
-  },
-  {
-    "source": "CONTACTS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
-  },
-  {
-    "source": "CONTACTS",
-    "event": "ContactInvoiceInfoUpdated",
-    "target": "SEARCH"
+    "target": "INVOICES"
   },
   {
     "source": "ADMIN",
@@ -335,6 +315,21 @@
     "target": "SEARCH"
   },
   {
+    "source": "COMPANIES",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "COMPANIES",
+    "event": "ContactAdded",
+    "target": "SEARCH"
+  },
+  {
+    "source": "COMPANIES",
+    "event": "UpdateCompanyTermsAndConditions",
+    "target": "COMPANIES"
+  },
+  {
     "source": "PROPOSALS",
     "event": "CalculateRelevance",
     "target": "RELEVANCE"
@@ -366,7 +361,7 @@
   },
   {
     "source": "UI",
-    "event": "SearchProperties",
+    "event": "SearchPropertiesByRelevance",
     "target": "PROPERTIES"
   },
   {
@@ -921,6 +916,11 @@
   },
   {
     "source": "UI",
+    "event": "BusinessEventCreated",
+    "target": "ANALYTICS"
+  },
+  {
+    "source": "UI",
     "event": "GetFeatureFlags",
     "target": "FEATUREFLAGS"
   },
@@ -971,6 +971,11 @@
   },
   {
     "source": "UI",
+    "event": "GetReservations",
+    "target": "RESERVATIONS"
+  },
+  {
+    "source": "UI",
     "event": "CreateReservation",
     "target": "RESERVATIONS"
   },
@@ -981,7 +986,7 @@
   },
   {
     "source": "UI",
-    "event": "UpdateReservation",
+    "event": "CreateReservation",
     "target": "RESERVATIONS"
   },
   {
@@ -992,6 +997,16 @@
   {
     "source": "UI",
     "event": "GetReservation",
+    "target": "RESERVATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "UpdateReservation",
+    "target": "RESERVATIONS"
+  },
+  {
+    "source": "UI",
+    "event": "DeleteReservation",
     "target": "RESERVATIONS"
   },
   {
@@ -1032,7 +1047,17 @@
   {
     "source": "UI",
     "event": "SearchProperties",
-    "target": "PROPERTIES"
+    "target": "SEARCH"
+  },
+  {
+    "source": "UI",
+    "event": "IndexPropertyCommand",
+    "target": "SEARCH"
+  },
+  {
+    "source": "UI",
+    "event": "PropertyOwnerUpdated",
+    "target": "SEARCH"
   },
   {
     "source": "UI",
@@ -1041,13 +1066,23 @@
   },
   {
     "source": "UI",
+    "event": "GetProviderUsualContact",
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "UI",
     "event": "AddProviderUsualContact",
-    "target": "CONTACTS"
+    "target": "PROVIDERS"
   },
   {
     "source": "UI",
     "event": "GetProviderUsualContact",
-    "target": "CONTACTS"
+    "target": "PROVIDERS"
+  },
+  {
+    "source": "UI",
+    "event": "AddProviderUsualContact",
+    "target": "PROVIDERS"
   },
   {
     "source": "UI",
