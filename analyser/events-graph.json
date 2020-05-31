@@ -1,1092 +1,1092 @@
 [
   {
-    "source": "RELEVANCE",
-    "event": "SearchProperties",
-    "target": "SEARCH"
+    "source_node": "RELEVANCE",
+    "edge": "SearchProperties",
+    "target_node": "SEARCH"
   },
   {
-    "source": "RELEVANCE",
-    "event": "OpportunityScoreCalculated",
-    "target": "ANALYTICS"
+    "source_node": "RELEVANCE",
+    "edge": "OpportunityScoreCalculated",
+    "target_node": "ANALYTICS"
   },
   {
-    "source": "RELEVANCE",
-    "event": "RelevanceCalculated",
-    "target": "SEARCH"
+    "source_node": "RELEVANCE",
+    "edge": "RelevanceCalculated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PAYMENTS",
-    "event": "PaymentExecuted",
-    "target": "PAYMENTS"
+    "source_node": "PAYMENTS",
+    "edge": "PaymentExecuted",
+    "target_node": "PAYMENTS"
   },
   {
-    "source": "PAYMENTS",
-    "event": "PaymentExecuted",
-    "target": "NOTIFICATIONS"
+    "source_node": "PAYMENTS",
+    "edge": "PaymentExecuted",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "OPPORTUNITIES",
-    "event": "CalculateRelevance",
-    "target": "RELEVANCE"
+    "source_node": "OPPORTUNITIES",
+    "edge": "CalculateRelevance",
+    "target_node": "RELEVANCE"
   },
   {
-    "source": "OPPORTUNITIES",
-    "event": "OpportunityBacked",
-    "target": "SEARCH"
+    "source_node": "OPPORTUNITIES",
+    "edge": "OpportunityBacked",
+    "target_node": "SEARCH"
   },
   {
-    "source": "OPPORTUNITIES",
-    "event": "AddContact",
-    "target": "COMPANIES"
+    "source_node": "OPPORTUNITIES",
+    "edge": "AddContact",
+    "target_node": "COMPANIES"
   },
   {
-    "source": "OPPORTUNITIES",
-    "event": "OpportunityConfirmed",
-    "target": "SEARCH"
+    "source_node": "OPPORTUNITIES",
+    "edge": "OpportunityConfirmed",
+    "target_node": "SEARCH"
   },
   {
-    "source": "OPPORTUNITIES",
-    "event": "FollowUpsInfoUpdated",
-    "target": "SEARCH"
+    "source_node": "OPPORTUNITIES",
+    "edge": "FollowUpsInfoUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "OPPORTUNITIES",
-    "event": "PropertyOpportunityVisited",
-    "target": "ANALYTICS"
+    "source_node": "OPPORTUNITIES",
+    "edge": "PropertyOpportunityVisited",
+    "target_node": "ANALYTICS"
   },
   {
-    "source": "OPPORTUNITIES",
-    "event": "OpportunityPaid",
-    "target": "SEARCH"
+    "source_node": "OPPORTUNITIES",
+    "edge": "OpportunityPaid",
+    "target_node": "SEARCH"
   },
   {
-    "source": "OPPORTUNITIES",
-    "event": "CustomerInvoiceInfoUpdated",
-    "target": "INVOICES"
+    "source_node": "OPPORTUNITIES",
+    "edge": "CustomerInvoiceInfoUpdated",
+    "target_node": "INVOICES"
   },
   {
-    "source": "OPPORTUNITIES",
-    "event": "CustomerInvoiceInfoUpdated",
-    "target": "SEARCH"
+    "source_node": "OPPORTUNITIES",
+    "edge": "CustomerInvoiceInfoUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "OPPORTUNITIES",
-    "event": "CustomerInvoiceInfoUpdated",
-    "target": "NOTIFICATIONS"
+    "source_node": "OPPORTUNITIES",
+    "edge": "CustomerInvoiceInfoUpdated",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "OPPORTUNITIES",
-    "event": "CustomerInvoiceInfoUpdated",
-    "target": "NOTIFICATIONS"
+    "source_node": "OPPORTUNITIES",
+    "edge": "CustomerInvoiceInfoUpdated",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "INVOICES",
-    "event": "ContactInvoiceInfoUpdated",
-    "target": "SEARCH"
+    "source_node": "INVOICES",
+    "edge": "ContactInvoiceInfoUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "COMMONS",
-    "event": "GetFeatureFlagActive",
-    "target": "FEATUREFLAGS"
+    "source_node": "COMMONS",
+    "edge": "GetFeatureFlagActive",
+    "target_node": "FEATUREFLAGS"
   },
   {
-    "source": "RESERVATIONS",
-    "event": "PropertyReservationsUpdated",
-    "target": "SEARCH"
+    "source_node": "RESERVATIONS",
+    "edge": "PropertyReservationsUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "RESERVATIONS",
-    "event": "PropertyReservationsUpdated",
-    "target": "SEARCH"
+    "source_node": "RESERVATIONS",
+    "edge": "PropertyReservationsUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "RESERVATIONS",
-    "event": "PropertyReservationsUpdated",
-    "target": "PROPERTIES"
+    "source_node": "RESERVATIONS",
+    "edge": "PropertyReservationsUpdated",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "PROVIDERS",
-    "event": "GetPropertiesByProviderId",
-    "target": "PROPERTIES"
+    "source_node": "PROVIDERS",
+    "edge": "GetPropertiesByProviderId",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "PROVIDERS",
-    "event": "GetProviderQualifyingQuestions",
-    "target": "QUALIFYING"
+    "source_node": "PROVIDERS",
+    "edge": "GetProviderQualifyingQuestions",
+    "target_node": "QUALIFYING"
   },
   {
-    "source": "PROVIDERS",
-    "event": "CreateProviderBaseContact",
-    "target": "PROVIDERS"
+    "source_node": "PROVIDERS",
+    "edge": "CreateProviderBaseContact",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ProviderCreated",
-    "target": "BUSINESSEVENTS"
+    "source_node": "PROVIDERS",
+    "edge": "ProviderCreated",
+    "target_node": "BUSINESSEVENTS"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ProviderCreated",
-    "target": "SEARCH"
+    "source_node": "PROVIDERS",
+    "edge": "ProviderCreated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ProviderBasicInfoUpdated",
-    "target": "PROVIDERS"
+    "source_node": "PROVIDERS",
+    "edge": "ProviderBasicInfoUpdated",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ProviderBasicInfoUpdated",
-    "target": "SEARCH"
+    "source_node": "PROVIDERS",
+    "edge": "ProviderBasicInfoUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
+    "source_node": "PROVIDERS",
+    "edge": "ContactAdded",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
+    "source_node": "PROVIDERS",
+    "edge": "ContactAdded",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
+    "source_node": "PROVIDERS",
+    "edge": "ContactAdded",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
+    "source_node": "PROVIDERS",
+    "edge": "ContactAdded",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
+    "source_node": "PROVIDERS",
+    "edge": "ContactAdded",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ContactAdded",
-    "target": "SEARCH"
+    "source_node": "PROVIDERS",
+    "edge": "ContactAdded",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ProviderConditionsUpdated",
-    "target": "SEARCH"
+    "source_node": "PROVIDERS",
+    "edge": "ProviderConditionsUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ProviderAvailabilityChecked",
-    "target": "BUSINESSEVENTS"
+    "source_node": "PROVIDERS",
+    "edge": "ProviderAvailabilityChecked",
+    "target_node": "BUSINESSEVENTS"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ProviderInvoiceInfoUpdated",
-    "target": "PROVIDERS"
+    "source_node": "PROVIDERS",
+    "edge": "ProviderInvoiceInfoUpdated",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "PROVIDERS",
-    "event": "ProviderInvoiceInfoUpdated",
-    "target": "SEARCH"
+    "source_node": "PROVIDERS",
+    "edge": "ProviderInvoiceInfoUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROVIDERS",
-    "event": "UpdateContactInvoiceInfo",
-    "target": "INVOICES"
+    "source_node": "PROVIDERS",
+    "edge": "UpdateContactInvoiceInfo",
+    "target_node": "INVOICES"
   },
   {
-    "source": "PROVIDERS",
-    "event": "GetContactInvoiceInfo",
-    "target": "INVOICES"
+    "source_node": "PROVIDERS",
+    "edge": "GetContactInvoiceInfo",
+    "target_node": "INVOICES"
   },
   {
-    "source": "ADMIN",
-    "event": "GetFeatureFlags",
-    "target": "FEATUREFLAGS"
+    "source_node": "ADMIN",
+    "edge": "GetFeatureFlags",
+    "target_node": "FEATUREFLAGS"
   },
   {
-    "source": "ADMIN",
-    "event": "ProposalCreated",
-    "target": "BUSINESSEVENTS"
+    "source_node": "ADMIN",
+    "edge": "ProposalCreated",
+    "target_node": "BUSINESSEVENTS"
   },
   {
-    "source": "ADMIN",
-    "event": "ProposalCreated",
-    "target": "NOTIFICATIONS"
+    "source_node": "ADMIN",
+    "edge": "ProposalCreated",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "ADMIN",
-    "event": "ProposalCreated",
-    "target": "ANALYTICS"
+    "source_node": "ADMIN",
+    "edge": "ProposalCreated",
+    "target_node": "ANALYTICS"
   },
   {
-    "source": "TYPEFORM",
-    "event": "CreateProposal",
-    "target": "PROPOSALS"
+    "source_node": "TYPEFORM",
+    "edge": "CreateProposal",
+    "target_node": "PROPOSALS"
   },
   {
-    "source": "AGENTS",
-    "event": "SearchOpportunities",
-    "target": "SEARCH"
+    "source_node": "AGENTS",
+    "edge": "SearchOpportunities",
+    "target_node": "SEARCH"
   },
   {
-    "source": "AGENTS",
-    "event": "AssignedRequest",
-    "target": "NOTIFICATIONS"
+    "source_node": "AGENTS",
+    "edge": "AssignedRequest",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "AGENTS",
-    "event": "SearchRequests",
-    "target": "SEARCH"
+    "source_node": "AGENTS",
+    "edge": "SearchRequests",
+    "target_node": "SEARCH"
   },
   {
-    "source": "REQUESTS",
-    "event": "BasicRequestDataUpdated",
-    "target": "SEARCH"
+    "source_node": "REQUESTS",
+    "edge": "BasicRequestDataUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROPERTIES",
-    "event": "PropertyBasicInfoUpdated",
-    "target": "SEARCH"
+    "source_node": "PROPERTIES",
+    "edge": "PropertyBasicInfoUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROPERTIES",
-    "event": "PropertyDeleted",
-    "target": "SEARCH"
+    "source_node": "PROPERTIES",
+    "edge": "PropertyDeleted",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROPERTIES",
-    "event": "PropertyCreated",
-    "target": "SEARCH"
+    "source_node": "PROPERTIES",
+    "edge": "PropertyCreated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROPERTIES",
-    "event": "PropertyPublicationStatusUpdated",
-    "target": "SEARCH"
+    "source_node": "PROPERTIES",
+    "edge": "PropertyPublicationStatusUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROPERTIES",
-    "event": "TagEntity",
-    "target": "TAGGING"
+    "source_node": "PROPERTIES",
+    "edge": "TagEntity",
+    "target_node": "TAGGING"
   },
   {
-    "source": "PROPERTIES",
-    "event": "GetTaggedEntities",
-    "target": "TAGGING"
+    "source_node": "PROPERTIES",
+    "edge": "GetTaggedEntities",
+    "target_node": "TAGGING"
   },
   {
-    "source": "PROPERTIES",
-    "event": "GetRelevance",
-    "target": "RELEVANCE"
+    "source_node": "PROPERTIES",
+    "edge": "GetRelevance",
+    "target_node": "RELEVANCE"
   },
   {
-    "source": "PROPERTIES",
-    "event": "PropertyAmenitiesUpdated",
-    "target": "SEARCH"
+    "source_node": "PROPERTIES",
+    "edge": "PropertyAmenitiesUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROPERTIES",
-    "event": "PropertyIcalUpdated",
-    "target": "DEV_NULL"
+    "source_node": "PROPERTIES",
+    "edge": "PropertyIcalUpdated",
+    "target_node": "DEV_NULL"
   },
   {
-    "source": "PROPERTIES",
-    "event": "PropertyPictureDeleted",
-    "target": "SEARCH"
+    "source_node": "PROPERTIES",
+    "edge": "PropertyPictureDeleted",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROPERTIES",
-    "event": "PropertyMainPictureUpdated",
-    "target": "SEARCH"
+    "source_node": "PROPERTIES",
+    "edge": "PropertyMainPictureUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "PROPERTIES",
-    "event": "PropertyPriceUpdated",
-    "target": "SEARCH"
+    "source_node": "PROPERTIES",
+    "edge": "PropertyPriceUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "NOTIFICATIONS",
-    "event": "GetFeatureFlag",
-    "target": "FEATUREFLAGS"
+    "source_node": "NOTIFICATIONS",
+    "edge": "GetFeatureFlag",
+    "target_node": "FEATUREFLAGS"
   },
   {
-    "source": "COMPANIES",
-    "event": "CompanyTermsAndConditionsUpdated",
-    "target": "SEARCH"
+    "source_node": "COMPANIES",
+    "edge": "CompanyTermsAndConditionsUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "COMPANIES",
-    "event": "ContactAdded",
-    "target": "SEARCH"
+    "source_node": "COMPANIES",
+    "edge": "ContactAdded",
+    "target_node": "SEARCH"
   },
   {
-    "source": "COMPANIES",
-    "event": "ContactAdded",
-    "target": "SEARCH"
+    "source_node": "COMPANIES",
+    "edge": "ContactAdded",
+    "target_node": "SEARCH"
   },
   {
-    "source": "COMPANIES",
-    "event": "UpdateCompanyTermsAndConditions",
-    "target": "COMPANIES"
+    "source_node": "COMPANIES",
+    "edge": "UpdateCompanyTermsAndConditions",
+    "target_node": "COMPANIES"
   },
   {
-    "source": "PROPOSALS",
-    "event": "CalculateRelevance",
-    "target": "RELEVANCE"
+    "source_node": "PROPOSALS",
+    "edge": "CalculateRelevance",
+    "target_node": "RELEVANCE"
   },
   {
-    "source": "PROPOSALS",
-    "event": "GetRelevance",
-    "target": "RELEVANCE"
+    "source_node": "PROPOSALS",
+    "edge": "GetRelevance",
+    "target_node": "RELEVANCE"
   },
   {
-    "source": "PROPOSALS",
-    "event": "ProposalCreated",
-    "target": "BUSINESSEVENTS"
+    "source_node": "PROPOSALS",
+    "edge": "ProposalCreated",
+    "target_node": "BUSINESSEVENTS"
   },
   {
-    "source": "PROPOSALS",
-    "event": "ProposalCreated",
-    "target": "NOTIFICATIONS"
+    "source_node": "PROPOSALS",
+    "edge": "ProposalCreated",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "PROPOSALS",
-    "event": "ProposalCreated",
-    "target": "ANALYTICS"
+    "source_node": "PROPOSALS",
+    "edge": "ProposalCreated",
+    "target_node": "ANALYTICS"
   },
   {
-    "source": "PROPOSALS",
-    "event": "CalculateRelevance",
-    "target": "RELEVANCE"
+    "source_node": "PROPOSALS",
+    "edge": "CalculateRelevance",
+    "target_node": "RELEVANCE"
   },
   {
-    "source": "UI",
-    "event": "SearchPropertiesByRelevance",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "SearchPropertiesByRelevance",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "CreateNewProperty",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "CreateNewProperty",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetPublicProperties",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetPublicProperties",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetEnalquilerProperties",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetEnalquilerProperties",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetTrovitProperties",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetTrovitProperties",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetTucasaProperties",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetTucasaProperties",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "PostIdealistaProperties",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "PostIdealistaProperties",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetPublicProperty",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetPublicProperty",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "BatchQueryProperties",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "BatchQueryProperties",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetSimilarProperties",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetSimilarProperties",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "TagEnalquilerProperty",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "TagEnalquilerProperty",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "TagPublicProperty",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "TagPublicProperty",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "DeleteProperty",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "DeleteProperty",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "UpdatePropertyBasicInfo",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "UpdatePropertyBasicInfo",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetPropertyBasicInfo",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetPropertyBasicInfo",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "UpdatePropertyAmenities",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "UpdatePropertyAmenities",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetPropertyAmenities",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetPropertyAmenities",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "UpdatePropertyPrice",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "UpdatePropertyPrice",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetPropertyPrice",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetPropertyPrice",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetPropertyIcal",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetPropertyIcal",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "UpdatePropertyIcal",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "UpdatePropertyIcal",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetPropertyPicturesData",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetPropertyPicturesData",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "UpdatePropertyMainPicture",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "UpdatePropertyMainPicture",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "DeletePropertyPicture",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "DeletePropertyPicture",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "GetPropertyByProviderId",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "GetPropertyByProviderId",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "CreateOpportunity",
-    "target": "OPPORTUNITIES"
+    "source_node": "UI",
+    "edge": "CreateOpportunity",
+    "target_node": "OPPORTUNITIES"
   },
   {
-    "source": "UI",
-    "event": "SearchOpportunities",
-    "target": "SEARCH"
+    "source_node": "UI",
+    "edge": "SearchOpportunities",
+    "target_node": "SEARCH"
   },
   {
-    "source": "UI",
-    "event": "OpportunityRequestDataConfirmation",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "OpportunityRequestDataConfirmation",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "OpportunityCreated",
-    "target": "RELEVANCE"
+    "source_node": "UI",
+    "edge": "OpportunityCreated",
+    "target_node": "RELEVANCE"
   },
   {
-    "source": "UI",
-    "event": "CheckInOpportunityEvent",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "CheckInOpportunityEvent",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "CheckInOpportunityEvent",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "CheckInOpportunityEvent",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "BackOpportunity",
-    "target": "OPPORTUNITIES"
+    "source_node": "UI",
+    "edge": "BackOpportunity",
+    "target_node": "OPPORTUNITIES"
   },
   {
-    "source": "UI",
-    "event": "ConfirmOpportunity",
-    "target": "OPPORTUNITIES"
+    "source_node": "UI",
+    "edge": "ConfirmOpportunity",
+    "target_node": "OPPORTUNITIES"
   },
   {
-    "source": "UI",
-    "event": "PayOpportunity",
-    "target": "OPPORTUNITIES"
+    "source_node": "UI",
+    "edge": "PayOpportunity",
+    "target_node": "OPPORTUNITIES"
   },
   {
-    "source": "UI",
-    "event": "UpdateCustomerInvoiceInfo",
-    "target": "OPPORTUNITIES"
+    "source_node": "UI",
+    "edge": "UpdateCustomerInvoiceInfo",
+    "target_node": "OPPORTUNITIES"
   },
   {
-    "source": "UI",
-    "event": "GetOpportunityScore",
-    "target": "RELEVANCE"
+    "source_node": "UI",
+    "edge": "GetOpportunityScore",
+    "target_node": "RELEVANCE"
   },
   {
-    "source": "UI",
-    "event": "AddRedsysPayment",
-    "target": "PAYMENTS"
+    "source_node": "UI",
+    "edge": "AddRedsysPayment",
+    "target_node": "PAYMENTS"
   },
   {
-    "source": "UI",
-    "event": "GetOpportunityPayments",
-    "target": "PAYMENTS"
+    "source_node": "UI",
+    "edge": "GetOpportunityPayments",
+    "target_node": "PAYMENTS"
   },
   {
-    "source": "UI",
-    "event": "VisitPropertyOpportunity",
-    "target": "OPPORTUNITIES"
+    "source_node": "UI",
+    "edge": "VisitPropertyOpportunity",
+    "target_node": "OPPORTUNITIES"
   },
   {
-    "source": "UI",
-    "event": "GetVisitedPropertyOpportunity",
-    "target": "OPPORTUNITIES"
+    "source_node": "UI",
+    "edge": "GetVisitedPropertyOpportunity",
+    "target_node": "OPPORTUNITIES"
   },
   {
-    "source": "UI",
-    "event": "SendAvailabilityQuery",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "SendAvailabilityQuery",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "GetProposals",
-    "target": "PROPOSALS"
+    "source_node": "UI",
+    "edge": "GetProposals",
+    "target_node": "PROPOSALS"
   },
   {
-    "source": "UI",
-    "event": "AllProposalsRejected",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "AllProposalsRejected",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "OpportunityLost",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "OpportunityLost",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "OpportunityLostRecover",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "OpportunityLostRecover",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "SearchProposals",
-    "target": "SEARCH"
+    "source_node": "UI",
+    "edge": "SearchProposals",
+    "target_node": "SEARCH"
   },
   {
-    "source": "UI",
-    "event": "CreateProposal",
-    "target": "PROPOSALS"
+    "source_node": "UI",
+    "edge": "CreateProposal",
+    "target_node": "PROPOSALS"
   },
   {
-    "source": "UI",
-    "event": "ProposalCreated",
-    "target": "BUSINESSEVENTS"
+    "source_node": "UI",
+    "edge": "ProposalCreated",
+    "target_node": "BUSINESSEVENTS"
   },
   {
-    "source": "UI",
-    "event": "ProposalCreated",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "ProposalCreated",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "ProposalCreated",
-    "target": "ANALYTICS"
+    "source_node": "UI",
+    "edge": "ProposalCreated",
+    "target_node": "ANALYTICS"
   },
   {
-    "source": "UI",
-    "event": "SendProposalConfirmation",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "SendProposalConfirmation",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "PreparingProposal",
-    "target": "ANALYTICS"
+    "source_node": "UI",
+    "edge": "PreparingProposal",
+    "target_node": "ANALYTICS"
   },
   {
-    "source": "UI",
-    "event": "AcceptedProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "AcceptedProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "AcceptedProposal",
-    "target": "ANALYTICS"
+    "source_node": "UI",
+    "edge": "AcceptedProposal",
+    "target_node": "ANALYTICS"
   },
   {
-    "source": "UI",
-    "event": "ShippedProposal",
-    "target": "ANALYTICS"
+    "source_node": "UI",
+    "edge": "ShippedProposal",
+    "target_node": "ANALYTICS"
   },
   {
-    "source": "UI",
-    "event": "RejectedProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "RejectedProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "RejectedProposal",
-    "target": "ANALYTICS"
+    "source_node": "UI",
+    "edge": "RejectedProposal",
+    "target_node": "ANALYTICS"
   },
   {
-    "source": "UI",
-    "event": "RecoveringProposal",
-    "target": "ANALYTICS"
+    "source_node": "UI",
+    "edge": "RecoveringProposal",
+    "target_node": "ANALYTICS"
   },
   {
-    "source": "UI",
-    "event": "ContractCreated",
-    "target": "INVOICES"
+    "source_node": "UI",
+    "edge": "ContractCreated",
+    "target_node": "INVOICES"
   },
   {
-    "source": "UI",
-    "event": "PostProposalsRelevance",
-    "target": "PROPOSALS"
+    "source_node": "UI",
+    "edge": "PostProposalsRelevance",
+    "target_node": "PROPOSALS"
   },
   {
-    "source": "UI",
-    "event": "SendProposals",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "SendProposals",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "TwoDaysToCheckinProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "TwoDaysToCheckinProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "TwoDaysToCheckinProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "TwoDaysToCheckinProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "CheckinInProgressProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "CheckinInProgressProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "ThreeDaysToMonthlyPaymentProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "ThreeDaysToMonthlyPaymentProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "ThreeDaysToMonthlyPaymentProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "ThreeDaysToMonthlyPaymentProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "ThreeDaysToMonthlyPaymentProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "ThreeDaysToMonthlyPaymentProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "ThreeDaysToMonthlyPaymentProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "ThreeDaysToMonthlyPaymentProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "FiveDaysToCheckoutProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "FiveDaysToCheckoutProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "FiveDaysToCheckoutProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "FiveDaysToCheckoutProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "OneDayAfterCheckoutProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "OneDayAfterCheckoutProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "OneDayAfterCheckoutProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "OneDayAfterCheckoutProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "FirstFollowUp",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "FirstFollowUp",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "SecondFollowUp",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "SecondFollowUp",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "QualityClientProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "QualityClientProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "QualityProviderProposal",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "QualityProviderProposal",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "GetAgents",
-    "target": "AGENTS"
+    "source_node": "UI",
+    "edge": "GetAgents",
+    "target_node": "AGENTS"
   },
   {
-    "source": "UI",
-    "event": "AgentAutoAssignment",
-    "target": "AGENTS"
+    "source_node": "UI",
+    "edge": "AgentAutoAssignment",
+    "target_node": "AGENTS"
   },
   {
-    "source": "UI",
-    "event": "Notify",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "Notify",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "ContentfulEvent",
-    "target": "CONTENTFUL"
+    "source_node": "UI",
+    "edge": "ContentfulEvent",
+    "target_node": "CONTENTFUL"
   },
   {
-    "source": "UI",
-    "event": "ContentfulGetGeneralConditions",
-    "target": "CONTENTFUL"
+    "source_node": "UI",
+    "edge": "ContentfulGetGeneralConditions",
+    "target_node": "CONTENTFUL"
   },
   {
-    "source": "UI",
-    "event": "ContentfulGetPrivacyPolicy",
-    "target": "CONTENTFUL"
+    "source_node": "UI",
+    "edge": "ContentfulGetPrivacyPolicy",
+    "target_node": "CONTENTFUL"
   },
   {
-    "source": "UI",
-    "event": "SearchRequests",
-    "target": "SEARCH"
+    "source_node": "UI",
+    "edge": "SearchRequests",
+    "target_node": "SEARCH"
   },
   {
-    "source": "UI",
-    "event": "UserLogin",
-    "target": "USERS"
+    "source_node": "UI",
+    "edge": "UserLogin",
+    "target_node": "USERS"
   },
   {
-    "source": "UI",
-    "event": "UpdateBasicRequestData",
-    "target": "REQUESTS"
+    "source_node": "UI",
+    "edge": "UpdateBasicRequestData",
+    "target_node": "REQUESTS"
   },
   {
-    "source": "UI",
-    "event": "AssignedRequest",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "AssignedRequest",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "CreateProvider",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "CreateProvider",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "CheckProviderAvailability",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "CheckProviderAvailability",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "UpdateProviderInvoiceInfo",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "UpdateProviderInvoiceInfo",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "GetProviderInvoiceInfo",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "GetProviderInvoiceInfo",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "UpdateProviderConditions",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "UpdateProviderConditions",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "GetProviderConditions",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "GetProviderConditions",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "UpdateProviderBasicInfo",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "UpdateProviderBasicInfo",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "GetProviderBasicInfo",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "GetProviderBasicInfo",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "AddProviderQualifyingQuestions",
-    "target": "QUALIFYING"
+    "source_node": "UI",
+    "edge": "AddProviderQualifyingQuestions",
+    "target_node": "QUALIFYING"
   },
   {
-    "source": "UI",
-    "event": "GetProviderQualifyingQuestions",
-    "target": "QUALIFYING"
+    "source_node": "UI",
+    "edge": "GetProviderQualifyingQuestions",
+    "target_node": "QUALIFYING"
   },
   {
-    "source": "UI",
-    "event": "GetPropertiesByProviderHomyspaceReference",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "GetPropertiesByProviderHomyspaceReference",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "Admin_DisableProvider",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_DisableProvider",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "Admin_EnableProvider",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_EnableProvider",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "Admin_UpdateProviderUsesICal",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_UpdateProviderUsesICal",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "Admin_UpdateProviderPriceType",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_UpdateProviderPriceType",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "Admin_UpdateProviderCommissionPercentage",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_UpdateProviderCommissionPercentage",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "Admin_UpdateProviderBillable",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_UpdateProviderBillable",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "Admin_GenerateHangoutsLink",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_GenerateHangoutsLink",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "Admin_UpdatePropertyPrice",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_UpdatePropertyPrice",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "Admin_MigrateOrigin",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_MigrateOrigin",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "Admin_MigratePropertyPublicationStatus",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_MigratePropertyPublicationStatus",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "Admin_UpdateAvailabilityIndex",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_UpdateAvailabilityIndex",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "Admin_GetFeatureFlags",
-    "target": "ADMIN"
+    "source_node": "UI",
+    "edge": "Admin_GetFeatureFlags",
+    "target_node": "ADMIN"
   },
   {
-    "source": "UI",
-    "event": "BusinessEventCreated",
-    "target": "OPPORTUNITIES"
+    "source_node": "UI",
+    "edge": "BusinessEventCreated",
+    "target_node": "OPPORTUNITIES"
   },
   {
-    "source": "UI",
-    "event": "BusinessEventCreated",
-    "target": "OPPORTUNITIES"
+    "source_node": "UI",
+    "edge": "BusinessEventCreated",
+    "target_node": "OPPORTUNITIES"
   },
   {
-    "source": "UI",
-    "event": "BusinessEventCreated",
-    "target": "ANALYTICS"
+    "source_node": "UI",
+    "edge": "BusinessEventCreated",
+    "target_node": "ANALYTICS"
   },
   {
-    "source": "UI",
-    "event": "GetFeatureFlags",
-    "target": "FEATUREFLAGS"
+    "source_node": "UI",
+    "edge": "GetFeatureFlags",
+    "target_node": "FEATUREFLAGS"
   },
   {
-    "source": "UI",
-    "event": "SaveFeatureFlag",
-    "target": "FEATUREFLAGS"
+    "source_node": "UI",
+    "edge": "SaveFeatureFlag",
+    "target_node": "FEATUREFLAGS"
   },
   {
-    "source": "UI",
-    "event": "GetFeatureFlag",
-    "target": "FEATUREFLAGS"
+    "source_node": "UI",
+    "edge": "GetFeatureFlag",
+    "target_node": "FEATUREFLAGS"
   },
   {
-    "source": "UI",
-    "event": "GetFeatureFlagActive",
-    "target": "FEATUREFLAGS"
+    "source_node": "UI",
+    "edge": "GetFeatureFlagActive",
+    "target_node": "FEATUREFLAGS"
   },
   {
-    "source": "UI",
-    "event": "InvoicePaid",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "InvoicePaid",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "InvoicePaid",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "InvoicePaid",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "InvoicePaid",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "InvoicePaid",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "InvoicePaid",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "InvoicePaid",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "AddCompanyQualifyingQuestions",
-    "target": "QUALIFYING"
+    "source_node": "UI",
+    "edge": "AddCompanyQualifyingQuestions",
+    "target_node": "QUALIFYING"
   },
   {
-    "source": "UI",
-    "event": "GetCompanyQualifyingQuestions",
-    "target": "QUALIFYING"
+    "source_node": "UI",
+    "edge": "GetCompanyQualifyingQuestions",
+    "target_node": "QUALIFYING"
   },
   {
-    "source": "UI",
-    "event": "GetReservations",
-    "target": "RESERVATIONS"
+    "source_node": "UI",
+    "edge": "GetReservations",
+    "target_node": "RESERVATIONS"
   },
   {
-    "source": "UI",
-    "event": "CreateReservation",
-    "target": "RESERVATIONS"
+    "source_node": "UI",
+    "edge": "CreateReservation",
+    "target_node": "RESERVATIONS"
   },
   {
-    "source": "UI",
-    "event": "GetReservations",
-    "target": "RESERVATIONS"
+    "source_node": "UI",
+    "edge": "GetReservations",
+    "target_node": "RESERVATIONS"
   },
   {
-    "source": "UI",
-    "event": "CreateReservation",
-    "target": "RESERVATIONS"
+    "source_node": "UI",
+    "edge": "CreateReservation",
+    "target_node": "RESERVATIONS"
   },
   {
-    "source": "UI",
-    "event": "DeleteReservation",
-    "target": "RESERVATIONS"
+    "source_node": "UI",
+    "edge": "DeleteReservation",
+    "target_node": "RESERVATIONS"
   },
   {
-    "source": "UI",
-    "event": "GetReservation",
-    "target": "RESERVATIONS"
+    "source_node": "UI",
+    "edge": "GetReservation",
+    "target_node": "RESERVATIONS"
   },
   {
-    "source": "UI",
-    "event": "UpdateReservation",
-    "target": "RESERVATIONS"
+    "source_node": "UI",
+    "edge": "UpdateReservation",
+    "target_node": "RESERVATIONS"
   },
   {
-    "source": "UI",
-    "event": "DeleteReservation",
-    "target": "RESERVATIONS"
+    "source_node": "UI",
+    "edge": "DeleteReservation",
+    "target_node": "RESERVATIONS"
   },
   {
-    "source": "UI",
-    "event": "GenerateAvailabilityLandingLink",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "GenerateAvailabilityLandingLink",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "AddOpportunityReservation",
-    "target": "RESERVATIONS"
+    "source_node": "UI",
+    "edge": "AddOpportunityReservation",
+    "target_node": "RESERVATIONS"
   },
   {
-    "source": "UI",
-    "event": "OpportunityReservationIntentionAdded",
-    "target": "NOTIFICATIONS"
+    "source_node": "UI",
+    "edge": "OpportunityReservationIntentionAdded",
+    "target_node": "NOTIFICATIONS"
   },
   {
-    "source": "UI",
-    "event": "AddProposalReservation",
-    "target": "RESERVATIONS"
+    "source_node": "UI",
+    "edge": "AddProposalReservation",
+    "target_node": "RESERVATIONS"
   },
   {
-    "source": "UI",
-    "event": "DeleteProposalReservation",
-    "target": "RESERVATIONS"
+    "source_node": "UI",
+    "edge": "DeleteProposalReservation",
+    "target_node": "RESERVATIONS"
   },
   {
-    "source": "UI",
-    "event": "ChangePublicationStatus",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "ChangePublicationStatus",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "ChangePublicationStatus",
-    "target": "PROPERTIES"
+    "source_node": "UI",
+    "edge": "ChangePublicationStatus",
+    "target_node": "PROPERTIES"
   },
   {
-    "source": "UI",
-    "event": "SearchProperties",
-    "target": "SEARCH"
+    "source_node": "UI",
+    "edge": "SearchProperties",
+    "target_node": "SEARCH"
   },
   {
-    "source": "UI",
-    "event": "IndexPropertyCommand",
-    "target": "SEARCH"
+    "source_node": "UI",
+    "edge": "IndexPropertyCommand",
+    "target_node": "SEARCH"
   },
   {
-    "source": "UI",
-    "event": "PropertyOwnerUpdated",
-    "target": "SEARCH"
+    "source_node": "UI",
+    "edge": "PropertyOwnerUpdated",
+    "target_node": "SEARCH"
   },
   {
-    "source": "UI",
-    "event": "PropertyPricingStatisticsCommand",
-    "target": "PRICING"
+    "source_node": "UI",
+    "edge": "PropertyPricingStatisticsCommand",
+    "target_node": "PRICING"
   },
   {
-    "source": "UI",
-    "event": "GetProviderUsualContact",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "GetProviderUsualContact",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "AddProviderUsualContact",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "AddProviderUsualContact",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "GetProviderUsualContact",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "GetProviderUsualContact",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "AddProviderUsualContact",
-    "target": "PROVIDERS"
+    "source_node": "UI",
+    "edge": "AddProviderUsualContact",
+    "target_node": "PROVIDERS"
   },
   {
-    "source": "UI",
-    "event": "GenerateProposalFromTypeform",
-    "target": "TYPEFORM"
+    "source_node": "UI",
+    "edge": "GenerateProposalFromTypeform",
+    "target_node": "TYPEFORM"
   }
 ]
